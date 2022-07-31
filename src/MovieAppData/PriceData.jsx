@@ -1,0 +1,51 @@
+import { v4 as uuidv4 } from "uuid";
+const exportPriceData = [
+    {
+        id: uuidv4(),
+        headerTitle: "Regular Plan",
+        headerTitleDesc: "( For those who like simple )",
+        priceAmmount: "$3.99",
+        orginalprice: "$8.99",
+        listPackageList1: "Unlimited Movies",
+        listPackageList2: "No Ads",
+        listPackageList3: "25 Downloading Movies",
+        listPackageList4: "5 TV Show Available",
+        listPackageList5: "HD available",
+        listPackageList6: "Only one screens you can watch on at the same time",
+        btnPrice: " Get 3-Month Plan",
+        savePrice: "SAVE 15%",
+    },
+
+    {
+        id: uuidv4(),
+        headerTitle: "Premium Plan",
+        headerTitleDesc: "( Best Plan for all needs ) ",
+        priceAmmount: "$15.99",
+        orginalprice: "$25.99",
+        listPackageList1: "Unlimited Movies",
+        listPackageList2: "No Ads",
+        listPackageList3: "100 Downloading Movies",
+        listPackageList4: "25 TV Show Available",
+        listPackageList5: "Ultra HD available",
+        listPackageList6: "Three screens you can watch on at the same time",
+        btnPrice: " Get 12-Months Plan",
+        savePrice: "SAVE 50%",
+    },
+    {
+        id: uuidv4(),
+        headerTitle: "Gold Plan",
+        headerTitleDesc: "( Get the latest movies with the highest quality )",
+        priceAmmount: "$8.99",
+        orginalprice: "$15.99",
+        listPackageList1: "Unlimited Movies",
+        listPackageList2: "No Ads",
+        listPackageList3: "50 downloading movies",
+        listPackageList4: "10 TV show Available",
+        listPackageList5: "HD available",
+        listPackageList6: "Only one screens you can watch on at the same time",
+        btnPrice: "Get 6-Months Plan",
+        savePrice: "SAVE 25%",
+    },
+];
+
+export default exportPriceData;
