@@ -1,4 +1,4 @@
 const API_KEY = {
-    Movie_API: `02c42deb7f5544ba0f2b0b7a7aa9bbe1`,
+    Movie_API: process.env.REACT_APP_API_KEY,
 };
 export default API_KEY;

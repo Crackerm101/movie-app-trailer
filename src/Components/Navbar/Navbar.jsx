@@ -8,7 +8,7 @@ import { MdOutlineNotifications, MdAccountCircle } from "react-icons/md";
 import NoNotif from "../../Assets/ic_round-notifications-paused.svg";
 import { Link } from "react-router-dom";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 // Scrollbar Component
 window.addEventListener("scroll", function () {
     const header = document.querySelector(".nav_head_container");
