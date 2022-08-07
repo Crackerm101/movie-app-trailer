@@ -73,7 +73,14 @@ function Row({ title, fetchUrl }) {
                     },
                 }}
             >
-                {isloading && <p>Loading...</p>}
+                {isloading && (
+                    <div className="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                )}
                 {movies.map((movie) => (
                     <SwiperSlide className="Popular_item " key={movie.id}>
                         <div className="Movie_popular_item_con">
@@ -83,6 +90,7 @@ function Row({ title, fetchUrl }) {
                             <Link to={`/movie/${movie.id}`}>
                                 <img
                                     className="row__poster"
+                                    loading="lazy"
                                     src={requests.w500Image(movie.poster_path)}
                                     alt={movie.name}
                                 />

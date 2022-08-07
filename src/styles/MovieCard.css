@@ -1,454 +1,431 @@
 .Movie_get_container {
-    width: 100%;
-    padding: 0.025rem 0%;
+  width: 100%;
+  padding: 0.025rem 0%;
 }
 
 .sub_navbar {
-    padding: 1rem 6%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    background-color: rgb(12, 5, 18);
+  padding: 1rem 6%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  background-color: rgb(12, 5, 18);
 }
 
 .sub_navbar span {
-    font-size: 1.5rem;
-    color: #bbbbbb;
+  font-size: 1.5rem;
+  color: #bbbbbb;
 }
 
 .Back_btn {
-    cursor: pointer;
-    color: #bbbbbb;
-    font-size: 1.5rem;
+  cursor: pointer;
+  color: #bbbbbb;
+  font-size: 1.5rem;
 }
 
 .Movie_player_container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .background_movie_data {
-    z-index: -1;
-    width: 100%;
-    height: 570px;
-    overflow: hidden;
-    mix-blend-mode: normal;
-    backdrop-filter: blur(15px);
-    background: rgba(1, 1, 1, 0.941);
+  z-index: -1;
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+  mix-blend-mode: normal;
+  backdrop-filter: blur(15px);
+  background: rgba(1, 1, 1, 0.941);
 }
 
 .background_movie_data img {
-    width: 100%;
-    height: 100vh;
-    background-image: cover;
-    z-index: -1;
-    opacity: 0.25;
-    backdrop-filter: blur(15px);
+  width: 100%;
+  height: 100vh;
+  background-image: cover;
+  z-index: -1;
+  opacity: 0.25;
+  backdrop-filter: blur(15px);
 }
 
 .btn_trailer {
-    cursor: pointer;
-    background-color: #663399;
-    max-width: 250px;
-    text-align: center;
-    font-size: 1rem;
-    color: #bbbbbb;
-    padding: 0.5rem;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    text-align: center;
+  cursor: pointer;
+  background-color: #663399;
+  max-width: 250px;
+  text-align: center;
+  font-size: 1rem;
+  color: #bbbbbb;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
 }
 
 .btn_trailer:hover {
-    filter: brightness(120%);
+  filter: brightness(120%);
 }
 
 .data_image_header img {
-    max-width: 350px;
-    border-radius: 6px;
+  max-width: 350px;
+  border-radius: 6px;
 }
 
 .movie_main_image_netflix {
-    position: absolute;
-    background-color: rgb(29, 11, 44);
-    bottom: 0;
-    width: 350px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 6px;
-    display: flex;
-    min-height: 80px;
-    justify-content: center;
-    gap: 1.5rem;
+  position: absolute;
+  background-color: rgb(29, 11, 44);
+  bottom: 0;
+  width: 350px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 6px;
+  display: flex;
+  min-height: 80px;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .movie_main_image_netflix img {
-    width: 13%;
+  width: 13%;
 }
 
 .now_Playing {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .now_Playing span {
-    font-size: 1.1rem;
-    color: #bbbbbb;
-    font-weight: thin;
+  font-size: 1.1rem;
+  color: #bbbbbb;
+  font-weight: thin;
 }
 
 .now_Playing span:nth-of-type(2) {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .movie_main_image {
-    position: relative;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    border-bottom: 0.5px solid rgb(18, 11, 23);
-    padding: 2rem 6%;
-    margin-top: -350px;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border-bottom: 0.5px solid rgb(18, 11, 23);
+  padding: 2rem 6%;
+  margin-top: -350px;
 }
 
 .movie_main_details {
-    color: #bbbbbb;
-    max-width: 650px;
+  color: #bbbbbb;
+  max-width: 650px;
 }
 
 .movie_title_date_card {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .movie_icons_card {
-    display: flex;
-    cursor: pointer;
-    gap: 1rem;
-    margin-bottom: 2rem;
+  display: flex;
+  cursor: pointer;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .data_image_header {
-    position: relative;
+  position: relative;
 }
 
 .movie_title_overview_card {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Youtube Trailer */
 
 .movie_list_con {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-column-gap: 0px;
-    padding: 3rem 6%;
-    border-bottom: 0.5px solid rgb(18, 11, 23);
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  width: 100%;
+  padding: 3rem 6%;
+  border-bottom: 0.5px solid rgb(18, 11, 23);
+  gap: 1rem;
 }
 
 .player-wrapper {
-    position: relative;
-    padding-top: 55.25%; /* Player ratio: 100 / (1280 / 720) */
-    background-color: rgb(12, 5, 18);
-    max-width: 950px;
-    margin: auto;
-    border: 5px solid rgb(12, 5, 18);
-    margin-top: 1rem;
+  position: relative;
+  padding-top: 55.25%;
+  background-color: rgb(12, 5, 18);
+  max-width: 950px;
+  margin: auto;
+  border: 5px solid rgb(12, 5, 18);
+  margin-top: 1rem;
 }
 
 .player-wrapper_data {
-    text-align: center;
-}
-
-.player-wrapper_data span {
-    font-size: 25px;
-    font-weight: bold;
-    color: #bbbbbb;
+  text-align: center;
 }
 
 .play_con {
-    width: 100%;
-    margin-top: 0.7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  width: 100%;
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .react-player {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 }
 
 /* Data Tab*/
 
 .data_tabs_container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    min-height: 300px;
-    background: rgba(6, 1, 11, 0.612);
-    margin: 45px auto 0;
-    backdrop-filter: blur(25px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  background: rgba(6, 1, 11, 0.612);
+  backdrop-filter: blur(25px);
 }
 
 .data_tab {
-    display: flex;
+  display: flex;
 }
 
 .Item_data_tab {
-    padding: 15px;
-    text-align: center;
-    width: 100%;
-    background: rgb(29, 11, 44);
-    cursor: pointer;
-    position: relative;
-    outline: none;
-    color: #bbbbbb;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  background: rgb(29, 11, 44);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  color: #bbbbbb;
 }
 
 .Item_data_tab:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
 }
 
 .active_tabs {
-    background: rgb(19, 6, 29);
-    border-bottom: 1px solid transparent;
-    filter: brightness(90%);
+  background: rgb(19, 6, 29);
+  border-bottom: 1px solid transparent;
+  filter: brightness(90%);
 }
 
 .active_tabs::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% + 2px);
-    height: 2px;
-    background: rgb(182, 182, 182);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 2px;
+  background: rgb(182, 182, 182);
 }
 
-.content-tabs {
-    flex-grow: 1;
-}
 .content {
-    padding: 20px;
-    width: 100%;
-    height: 610px;
-    display: none;
-    overflow-y: scroll;
+  padding: 20px;
+  height: 450px;
+  display: none;
+  overflow-y: scroll;
 }
 
 .active_content {
-    display: block;
-    overflow-y: scroll;
+  display: block;
 }
 
 .review_data_container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .review_data_container img {
-    width: 40px;
+  width: 40px;
 }
 
 .data_img_load_imgandName {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .data_img_load_imgandName span:nth-child(2) {
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
 
 .data_image_name {
-    color: #bbbbbb;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  color: #bbbbbb;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .data_review_desc {
-    color: #bbbbbb;
-    background: rgba(5, 1, 8, 0.735);
-    padding: 1rem;
-    margin-top: 2rem;
-    position: relative;
-    z-index: 10;
-    border-radius: 6px;
+  background: rgba(5, 1, 8, 0.735);
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 6px;
+
+  overflow: hidden;
 }
 
-.data_review_desc:before {
-    position: absolute;
-    content: "";
-    background: rgba(5, 1, 8, 0.735);
-    width: 25px;
-    height: 25px;
-    top: -13px;
-    rotate: 45deg;
+.data_review_desc span {
+  color: #bbbbbb;
+  position: relative;
 }
 
 .form_comment_discussion {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .message_container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    gap: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
 }
 
 .message_dis {
-    border-bottom-right-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    color: #ffff;
-    border-top-left-radius: 6px;
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(#242429 0 0) padding-box,
-        linear-gradient(
-                to bottom,
-                rgba(0, 133, 175, 0.7),
-                rgba(100, 31, 184, 0.7)
-            )
-            border-box;
-    backdrop-filter: blur(20px);
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  color: #ffff;
+  border-top-left-radius: 6px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(#242429 0 0) padding-box,
+    linear-gradient(to bottom, rgba(0, 133, 175, 0.7), rgba(100, 31, 184, 0.7))
+      border-box;
+  backdrop-filter: blur(20px);
 }
 
 .message_dis::placeholder {
-    color: #bbbbbb;
+  color: #bbbbbb;
 }
 .message_icon {
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    color: #bbbbbb;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #bbbbbb;
 }
 
 .more_container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .more_container span {
-    font-size: 5rem;
-    color: #bbbbbb;
+  font-size: 5rem;
+  color: #bbbbbb;
 }
 .more_container h2 {
-    color: #bbbbbb;
-    font-size: 1.2rem;
+  color: #bbbbbb;
+  font-size: 1.2rem;
 }
 
 /* cast imag */
 
 .data_cast_image {
-    padding: 5rem 6%;
+  padding: 5rem 6%;
 }
 
 span.title_cast {
-    font-size: 35px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    background: var(--font-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  background: var(--font-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .card_cast_img {
-    display: flex;
-    width: 100%;
-    padding: 2rem 0%;
+  display: flex;
+  width: 100%;
+  padding: 2rem 0%;
 }
 
 .Cast_list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .cast_card_img {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    background-color: rgb(12, 5, 18);
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: rgb(12, 5, 18);
 }
 
 .cast_card_img img {
-    width: 100%;
+  width: 100%;
 
-    color: #bbbbbb;
+  color: #bbbbbb;
 }
 
 .Cast_list span {
-    color: #bbbbbb;
+  color: #bbbbbb;
 }
 
 .Cast_list span:nth-child(2) {
-    margin-top: 1rem;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .recommendation_container {
-    display: flex;
-    width: 100%;
-    padding: 2rem 0%;
+  display: flex;
+  width: 100%;
+  padding: 2rem 0%;
 }
 
 .title_recomendation {
-    padding: 2rem 6%;
-    font-size: 35px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    background: var(--font-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  padding: 2rem 6%;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  background: var(--font-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media only screen and (max-width: 1080px) {
-    .movie_list_con {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+  .movie_list_con {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-    .movie_main_image {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .movie_icons_card {
-        display: flex;
-        justify-content: center;
-    }
+  .movie_main_image {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .movie_icons_card {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .btn_trailer {
-        display: flex;
-        flex-direction: column;
-    }
+  .btn_trailer {
+    display: flex;
+    flex-direction: column;
+  }
 }

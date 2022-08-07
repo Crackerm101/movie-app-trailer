@@ -35,7 +35,6 @@ const Movie = () => {
     const [castMovie, setCastMovie] = useState([]);
     const [recommendation, setRecommendation] = useState([]);
     const [Reviews, setReviews] = useState([]);
-
     const { id } = useParams();
 
     const [toggleState, setToggleState] = useState(1);
@@ -109,6 +108,7 @@ const Movie = () => {
             <div className="movie_main_image">
                 <div className="data_image_header">
                     <img
+                        loading="lazy"
                         src={newrequests.w500Image(
                             currentMovieDetail.poster_path
                         )}
@@ -148,14 +148,13 @@ const Movie = () => {
                     <div className="Data_container">
                         {trailerUrl.slice(0, 1).map((TrailerData) => (
                             <div
-                                className="player-wrapper_data"
+                                className="player_wrapper_data"
                                 key={TrailerData.id}
                             >
-                                <span>{TrailerData.name}</span>
                                 <div className="player-wrapper">
                                     <ReactPlayer
                                         className="react-player"
-                                        url={`www.youtube.com/embed/${TrailerData.key}`}
+                                        url={`https:www.youtube.com/embed/${TrailerData.key}`}
                                         width="100%"
                                         height="100%"
                                         controls={true}
@@ -302,7 +301,7 @@ const Movie = () => {
                     spaceBetween={0}
                     breakpoints={{
                         1320: {
-                            slidesPerView: 8,
+                            slidesPerView: 7,
                         },
                         1100: {
                             slidesPerView: 7,
@@ -332,6 +331,7 @@ const Movie = () => {
                                     src={newrequests.w500Image(
                                         CastMovielist.profile_path
                                     )}
+                                    loading="lazy"
                                     alt=""
                                 />
                             </div>
@@ -377,6 +377,7 @@ const Movie = () => {
                         <div className="Movie_popular_item_con">
                             <img
                                 className="row__poster"
+                                loading="lazy"
                                 src={newrequests.backdrop(
                                     Recommend.backdrop_path
                                 )}

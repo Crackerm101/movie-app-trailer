@@ -46,7 +46,7 @@ function Contact() {
                                 <img src={MailIcon} alt="" />
                             </span>
                             <span className="information_data">
-                                movieapp@bussiness.email.com
+                                movieapp@business.email.com
                             </span>
                         </div>
                         <div className="devices_con">
