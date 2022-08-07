@@ -14,7 +14,6 @@ import { Scrollbar, Keyboard } from "swiper";
 // cast Sample Image
 import Avatar from "../Assets/cast-1.png";
 
-import CardAPI from "../Api/api";
 import newrequests from "../Api/request";
 // icons
 import { BsFillPlayCircleFill } from "react-icons/bs";
@@ -49,7 +48,7 @@ const Movie = () => {
 
     const getData = async () => {
         const { data } = await axios.get(
-            `/movie/${id}?api_key=${CardAPI.Movie_API}`
+            `/movie/${id}?api_key=${process.env.REACT_APP_Movie_API_KEY}`
         );
         setCurrentMovieDetail(data);
     };
@@ -57,7 +56,7 @@ const Movie = () => {
     useEffect(() => {
         const castMovies = async () => {
             const { data } = await axios.get(
-                `/movie/${id}/credits?api_key=${CardAPI.Movie_API}&language=en-US&append_to_response=credits`
+                `/movie/${id}/credits?api_key=${process.env.REACT_APP_Movie_API_KEY}&language=en-US&append_to_response=credits`
             );
             setCastMovie(data.cast);
         };
@@ -67,7 +66,7 @@ const Movie = () => {
     useEffect(() => {
         const trailerurl = async () => {
             const { data } = await axios.get(
-                `/movie/${id}/videos?api_key=${CardAPI.Movie_API}&append_to_response=videos`
+                `/movie/${id}/videos?api_key=${process.env.REACT_APP_Movie_API_KEY}&append_to_response=videos`
             );
             setTrailerUrl(data.results);
         };
@@ -77,7 +76,7 @@ const Movie = () => {
     useEffect(() => {
         const recommendation = async () => {
             const { data } = await axios.get(
-                `movie/${id}/recommendations?api_key=${CardAPI.Movie_API}`
+                `movie/${id}/recommendations?api_key=${process.env.REACT_APP_Movie_API_KEY}`
             );
             setRecommendation(data.results);
             // console.log(data.results);
@@ -88,7 +87,7 @@ const Movie = () => {
     useEffect(() => {
         const Reviews = async () => {
             const { data } = await axios.get(
-                `movie/${id}/reviews?api_key=${CardAPI.Movie_API}`
+                `movie/${id}/reviews?api_key=${process.env.REACT_APP_Movie_API_KEY}`
             );
             setReviews(data.results);
             // console.log(data.results);
