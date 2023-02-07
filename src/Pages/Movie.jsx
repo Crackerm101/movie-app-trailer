@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "../Api/axios";
 import ReactPlayer from "react-player";
 // Import css
-import "../styles/MovieCard.css";
+import "../styles/moviecard.css";
 import { useParams } from "react-router";
 import { useEffect } from "react";
 
@@ -15,6 +15,7 @@ import { Scrollbar, Keyboard } from "swiper";
 import Avatar from "../Assets/cast-1.png";
 
 import newrequests from "../Api/request";
+
 // icons
 import { BsFillPlayCircleFill } from "react-icons/bs";
 import { AiOutlineCloudDownload } from "react-icons/ai";
@@ -34,9 +35,8 @@ const Movie = () => {
     const [castMovie, setCastMovie] = useState([]);
     const [recommendation, setRecommendation] = useState([]);
     const [Reviews, setReviews] = useState([]);
-    const { id } = useParams();
-
     const [toggleState, setToggleState] = useState(1);
+    const { id } = useParams();
 
     const toggleTab = (index) => {
         setToggleState(index);
@@ -209,7 +209,7 @@ const Movie = () => {
                             More
                         </div>
                     </div>
-                    <div className="content-tabs">
+                    <div className="content_tabs">
                         <div
                             className={
                                 toggleState === 1
@@ -217,30 +217,45 @@ const Movie = () => {
                                     : "content"
                             }
                         >
-                            {Reviews.map((DataReviews) => (
-                                <div
-                                    className="review_data_container"
-                                    key={DataReviews.id}
-                                >
-                                    <div className="data_image_name">
-                                        <div className="data_img_load_imgandName">
-                                            <img src={Avatar} alt="" />
+                            <div className="data_reviews_main_con">
+                                {Reviews.map((DataReviews) => (
+                                    <div
+                                        className="review_data_container"
+                                        key={DataReviews.id}
+                                    >
+                                        <div className="data_image_name">
+                                            <div className="data_img_load_imgandName">
+                                                <img src={Avatar} alt="" />
+                                                <span>
+                                                    {DataReviews.author}
+                                                    <br />
+                                                    {DataReviews.updated_at}
+                                                </span>
+                                            </div>
                                             <span>
-                                                {DataReviews.author}
-                                                <br />
-                                                {DataReviews.updated_at}
+                                                Rating: &nbsp;
+                                                {
+                                                    DataReviews.author_details
+                                                        .rating
+                                                }
                                             </span>
                                         </div>
-                                        <span>
-                                            Rating: &nbsp;
-                                            {DataReviews.author_details.rating}
-                                        </span>
+                                        <div className="data_review_desc">
+                                            <span>{DataReviews.content}</span>
+                                        </div>
                                     </div>
-                                    <div className="data_review_desc">
-                                        <span>{DataReviews.content}</span>
-                                    </div>
+                                ))}
+                            </div>
+                            <div className="message_container">
+                                <input
+                                    type="text"
+                                    className="message_dis"
+                                    placeholder="Write your message here...."
+                                />
+                                <div className="message_icon">
+                                    <RiSendPlaneFill />
                                 </div>
-                            ))}
+                            </div>
                         </div>
 
                         <div
@@ -251,15 +266,12 @@ const Movie = () => {
                             }
                         >
                             <div className="form_comment_discussion">
-                                <div className="message_container">
-                                    <input
-                                        type="text"
-                                        className="message_dis"
-                                        placeholder="Write your message here...."
-                                    />
-                                    <div className="message_icon">
-                                        <RiSendPlaneFill />
-                                    </div>
+                                {" "}
+                                <div className="more_container">
+                                    <span>
+                                        <GiTrafficCone />
+                                    </span>
+                                    <h2>Under Maintenance.....</h2>
                                 </div>
                             </div>
                         </div>
@@ -300,7 +312,7 @@ const Movie = () => {
                     spaceBetween={0}
                     breakpoints={{
                         1320: {
-                            slidesPerView: 7,
+                            slidesPerView: 8,
                         },
                         1100: {
                             slidesPerView: 7,
@@ -341,59 +353,65 @@ const Movie = () => {
                     ))}
                 </Swiper>
             </div>
-            <span className="title_recomendation">Recommendations</span>
-            <Swiper
-                className="recommendation_container"
-                modules={[Keyboard]}
-                keyboard={{
-                    enabled: true,
-                }}
-                spaceBetween={5}
-                breakpoints={{
-                    1320: {
-                        slidesPerView: 8,
-                    },
-                    1100: {
-                        slidesPerView: 7,
-                    },
-                    910: {
-                        slidesPerView: 6,
-                    },
-                    800: {
-                        slidesPerView: 5,
-                    },
-                    650: {
-                        slidesPerView: 4,
-                    },
 
-                    320: {
-                        slidesPerView: 3,
-                    },
-                }}
-            >
-                {recommendation.map((Recommend) => (
-                    <SwiperSlide className="Popular_item " key={Recommend.id}>
-                        <div className="Movie_popular_item_con">
-                            <img
-                                className="row__poster"
-                                loading="lazy"
-                                src={newrequests.backdrop(
-                                    Recommend.backdrop_path
-                                )}
-                                alt={Recommend.name}
-                            />
-                        </div>
+            <div className="recommend_item_container">
+                <span className="title_recomendation">Recommendations</span>
+                <Swiper
+                    className="recommendation_container"
+                    modules={[Keyboard]}
+                    keyboard={{
+                        enabled: true,
+                    }}
+                    spaceBetween={5}
+                    breakpoints={{
+                        1320: {
+                            slidesPerView: 8,
+                        },
+                        1100: {
+                            slidesPerView: 7,
+                        },
+                        910: {
+                            slidesPerView: 6,
+                        },
+                        800: {
+                            slidesPerView: 5,
+                        },
+                        650: {
+                            slidesPerView: 4,
+                        },
 
-                        <div className="Movie_popular_item_con_title">
-                            <p>
-                                {Recommend.original_title}
-                                <br></br>
-                                {Recommend.release_date}
-                            </p>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                        320: {
+                            slidesPerView: 3,
+                        },
+                    }}
+                >
+                    {recommendation.map((Recommend) => (
+                        <SwiperSlide
+                            className="Popular_item "
+                            key={Recommend.id}
+                        >
+                            <div className="Movie_popular_item_con">
+                                <img
+                                    className="row__poster"
+                                    loading="lazy"
+                                    src={newrequests.backdrop(
+                                        Recommend.backdrop_path
+                                    )}
+                                    alt={Recommend.name}
+                                />
+                            </div>
+
+                            <div className="Movie_popular_item_con_title">
+                                <p>
+                                    {Recommend.original_title}
+                                    <br></br>
+                                    {Recommend.release_date}
+                                </p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </div>
     );
 };
