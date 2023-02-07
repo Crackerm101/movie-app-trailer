@@ -1,0 +1,179 @@
+.contact_us_container {
+    padding: 7rem 8%;
+    width: 100%;
+    position: relative;
+    max-width: 1512px;
+    margin: auto;
+}
+
+.movie_contact_head_title {
+    font-weight: 400;
+    font-size: 20px;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.contact_details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+img.Contact_Icon {
+    width: 95px;
+    height: 99.49px;
+}
+
+.contact_information_con_data {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact_Header_Information {
+    margin-bottom: 25px;
+}
+
+span.information_data {
+    font-weight: 400;
+    font-size: 20px;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact_Header_Information span {
+    font-size: 25px;
+    font-weight: 600;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact_box_data_box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icon_data img {
+    width: 30px;
+    height: 30px;
+}
+
+.devices_con {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.devices_con img.devices_icon:hover {
+    filter: brightness(120%);
+}
+
+.devices_con img.devices_icon {
+    width: 143px;
+    height: 46px;
+}
+
+.first_name_con {
+    display: flex;
+    gap: 1.5rem;
+}
+.first_con {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.first_con label {
+    font-weight: 400;
+    font-size: 20px;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.first_con input.first_name_input {
+    background-color: transparent;
+    border-bottom: 1.5px solid #4d3c7a;
+    border-radius: 0;
+    color: #bbbbbb;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0px 5px;
+}
+
+.first_con input.first_name_input::placeholder {
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.Contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.message_con {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.message_con input.email_name_input {
+    background-color: transparent;
+    border-bottom: 1.5px solid #4d3c7a;
+    border-radius: 0;
+    color: #bbbbbb;
+    font-weight: 400;
+    font-size: 15px;
+    width: 100%;
+}
+
+.message_con label {
+    font-weight: 400;
+    font-size: 20px;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text_contact {
+    font-weight: 400;
+    font-size: 12px;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.btn_contact {
+    font-weight: 400;
+    font-size: 20px;
+    color: #e0d7d7;
+    width: 188px;
+    height: 41px;
+    background: linear-gradient(
+            180deg,
+            rgba(181, 157, 157, 0.2) 0%,
+            rgba(181, 157, 157, 0) 100%
+        ),
+        linear-gradient(0deg, #644ea0, #644ea0),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+        #d9d9d9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn_contact:hover {
+    filter: brightness(120%);
+}
