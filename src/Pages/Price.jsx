@@ -1,5 +1,7 @@
 import PriceData from "../MovieAppData/PriceData";
 import { BsDot } from "react-icons/bs";
+
+import "../styles/price.css";
 const Price = () => {
     return (
         <section className="movie_price_container" id="Price">
