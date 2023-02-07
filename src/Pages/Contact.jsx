@@ -2,6 +2,8 @@ import React from "react";
 import IOSIMG from "../Assets/ios_icon.svg";
 import GOOGLEIMG from "../Assets/google_play_icon.svg";
 
+import "../styles/contact.css";
+
 import ContactIcon from "../Assets/Contact_Icon.svg";
 import LocationIcon from "../Assets/location_icon.svg";
 import NumberIcon from "../Assets/contact_number-icon.svg";
@@ -10,7 +12,7 @@ import MailIcon from "../Assets/mail_icon.svg";
 function Contact() {
     return (
         <div className="contact_us_container">
-            <div className="movie_price_head_title">
+            <div className="movie_contact_head_title">
                 <img src={ContactIcon} alt="" className="Contact_Icon" />
                 <h1>Let's start a conversation!</h1>
                 <span>
@@ -30,7 +32,7 @@ function Contact() {
                                 <img src={LocationIcon} alt="" />
                             </span>
                             <span className="information_data">
-                                477 Findley Avenue , Minot North Dakota
+                                Benit Soliven, Isabela, Philippines
                             </span>
                         </div>
                         <div className="contact_box_data_box">
@@ -46,7 +48,7 @@ function Contact() {
                                 <img src={MailIcon} alt="" />
                             </span>
                             <span className="information_data">
-                                movieapp@business.email.com
+                                freelancerjvviernes@gmail.com
                             </span>
                         </div>
                         <div className="devices_con">
