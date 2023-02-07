@@ -9,6 +9,12 @@ const requests = {
     fetchPopularMovies: `/movie/popular?api_key=${process.env.REACT_APP_Movie_API_KEY}&language=en-US&page=3`,
     fetchHorrorMovies: `/discover/movie?api_key=${process.env.REACT_APP_Movie_API_KEY}&with_genres=27`,
     fetchNowPlaying: `/movie/now_playing?api_key=${process.env.REACT_APP_Movie_API_KEY}&language=en-US&page=1`,
+    fetchTvAirToday: `/tv/airing_today?api_key=${process.env.REACT_APP_Movie_API_KEY}&language=en-US&page=1`,
+    fetchTvOnAir: `/tv/on_the_air?api_key=${process.env.REACT_APP_Movie_API_KEY}&language=en-US&page=1`,
+    fetchTvAirTodayPage: `/tv/airing_today?api_key=${process.env.REACT_APP_Movie_API_KEY}&language=en-US&page=3`,
+    fetchTvPopular: `/tv/popular?api_key=${process.env.REACT_APP_Movie_API_KEY}&language=en-US&page=1`,
+    fetchTvTopRated: `/tv/top_rated?api_key=${process.env.REACT_APP_Movie_API_KEY}&language=en-US&page=1`,
+
     w500Image: (imgPath) => `https://image.tmdb.org/t/p/w500/${imgPath}`,
     backdrop: (backdrop_path) =>
         `https://image.tmdb.org/t/p/original/${backdrop_path}`,
