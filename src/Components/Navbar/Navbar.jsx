@@ -64,9 +64,9 @@ const Navbar = () => {
                             <Link to="Price" className="Nav_link">
                                 Pricing
                             </Link>
-                            <a href="#" className="Nav_link">
-                                Tv Shows
-                            </a>
+                            <Link to="/TVshows" className="Nav_link">
+                                TV Shows
+                            </Link>
                             <Link to="/Contact" className="Nav_link">
                                 Contact Us
                             </Link>
